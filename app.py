@@ -49,7 +49,7 @@ def whatsapp_webhook():
             resp.message("Gracias por usar nuestros servicios. Hasta luego.")
             del sesiones[telefono] 
         elif mensaje.lower() in ["si", "s", "sí"]:
-            resp.message("1.-Datos medianos o pequeños con Pandas con CSV o\n2.-Datos medianos o pequeños con Pandas con XLSX\n\nPor favor, copie y pegue el link de la data (API JSON, CSV o XLSX):")
+            resp.message("Excelente. Para comenzar a generar tu reporte, por favor envíame el enlace directo (URL) de los datos.\n\n *Formatos compatibles: Enlaces web a archivos CSV, Excel (.xlsx) o APIs en JSON.*")
             sesiones[telefono]["estado"] = "esperando_url"
         else:
             resp.message("Respuesta no válida. ¿Deseas realizar un análisis exploratorio de datos? Si o no")
